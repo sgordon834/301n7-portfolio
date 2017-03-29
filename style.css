@@ -23,7 +23,7 @@ body {
 .nav {
   display: flex;
   justify-content: space-around;
-  font-weight: 700;
+  font-weight: 750;
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
