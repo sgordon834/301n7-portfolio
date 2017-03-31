@@ -43,7 +43,6 @@ body {
 
 header {
   text-align: center;
-  /*background: url(https://images.icanvas.com/2d/6189.jpg) no-repeat top center ;*/
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -185,6 +184,7 @@ footer ul li {
 }
 
 /* Styles for larger screens */
+
 @media screen and (min-width: 720px) {
 
   .flex {

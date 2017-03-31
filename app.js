@@ -1,8 +1,10 @@
 var portfolioArray = [];
 
-var portfolioConstructor = {
+function portfolioConstructor() {
   this.name = name;
-  this.description = descrition;
+  this.description = description;
   this.url = url;
   portfolioArray.push(this);
 }
+
+portfolioConstructor();
