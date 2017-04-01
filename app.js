@@ -1,10 +1,16 @@
+'use strict';
+
 var portfolioArray = [];
 
-function portfolioConstructor() {
-  this.name = name;
-  this.description = description;
-  this.url = url;
+function PortfolioConstructor(proj) {
+  this.name = proj.name;
+  this.description = proj.description;
+  this.portfolioUrl = proj.portfolioUrl;
   portfolioArray.push(this);
 }
 
-portfolioConstructor();
+PortfolioConstructor();
+
+portfolioConstructor.prototype.toHtml = function() {
+  var $newPortfolioConstructor = $('portfolioConstructor.template').clone();
+};
