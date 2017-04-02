@@ -9,8 +9,24 @@ function PortfolioConstructor(proj) {
   portfolioArray.push(this);
 }
 
-PortfolioConstructor();
+PortfolioConstructor.prototype.toHtml = function() {
+    var $newPortfolioConstructor = $('article.template').clone();
+    $newPortfolioConstructor.removeClass('template');
 
-portfolioConstructor.prototype.toHtml = function() {
-  var $newPortfolioConstructor = $('portfolioConstructor.template').clone();
-};
+    $newPortfolioConstructor.data('category', this.category);
+    $newPortfolioConstructor.find('h1').html(this.name);
+    $newPortfolioConstructor.find('article-body').html(this.description);
+    console.log($newPortfolioConstructor);
+    return $newPortfolioConstructor;
+  };
+
+
+portfolioData.forEach(function(articleObject) {
+  portfolioArray.push(new PortfolioConstructor(articleObject));
+});
+
+portfolioArray.forEach(function(a) {
+  $('#articles').append(a.toHtml());
+});
+// PortfolioConstructor();
+// console.log('Hi');

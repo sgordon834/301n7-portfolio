@@ -1,14 +1,7 @@
-/* TODO: Add a rule for images, so they never exceed their container's width. */
-
 body {
   line-height: 1.5;
   font-size: 100%;
   color: #313131;
-}
-
-hr {
-  margin: 1em;
-  width: 80%;
 }
 
 /*TEXT STYLES
@@ -26,7 +19,7 @@ address {
 
 a, a:link, a:active {
   text-decoration: none;
-  color: #777;
+  color:  blue
 }
 
 a:hover, a:focus {
