@@ -4,9 +4,9 @@ var portfolioArray = [];
 
 function PortfolioConstructor(proj) {
   this.name = proj.name;
+  this.siteName = proj.siteName;
   this.description = proj.description;
   this.portfolioUrl = proj.portfolioUrl;
-  portfolioArray.push(this);
 }
 
 PortfolioConstructor.prototype.toHtml = function() {
@@ -15,7 +15,9 @@ PortfolioConstructor.prototype.toHtml = function() {
 
     $newPortfolioConstructor.data('category', this.category);
     $newPortfolioConstructor.find('h1').html(this.name);
-    $newPortfolioConstructor.find('article-body').html(this.description);
+    $newPortfolioConstructor.find('address a').html(this.siteName);
+    $newPortfolioConstructor.find('.article-body').html(this.description);
+    $newPortfolioConstructor.find('address a').attr('href', this.portfolioUrl);
     console.log($newPortfolioConstructor);
     return $newPortfolioConstructor;
   };

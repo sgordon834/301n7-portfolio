@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Portfolio</title>
-  <!-- TODO: Add a meta tag to properly set the viewport and initial scale -->
   <meta name="viewport" content="initial-scale=1">
   <link rel="stylesheet" href="styles/normalize.css">
-  <!-- REVIEW: Icon Fonts - Lets talk about why and how to use them best! -->
-  <link rel="stylesheet" href="styles/icons.css">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layouts.css">
   <link rel="stylesheet" href="styles/module.css">
@@ -30,15 +28,23 @@
           </symbol>
       </svg>
       <ul>
-        <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
-        <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
-        <li><a href="http://twitter.com/brookr" target="_blank" class="icon-twitter3"> Twitter</a></li>
-        <li><a href="http://github.com/brookr" target="_blank" class="icon-github"> GitHub</a></li>
+        <li class="tab" data-content="articles"><a href="#" class="icon-home"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        <li class="tab" data-content="about"><a href="#" class="icon-address-book"><i class="fa fa-info-circle" aria-hidden="true"></i>About</a></li>
+        <li><a href="http://twitter.com/brookr" target="_blank" class="icon-twitter3"><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        <li><a href="http://github.com/brookr" target="_blank" class="icon-github"><i class="fa fa-github-alt" aria-hidden="true"></i> GitHub</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <section id="articles" class="tab-content">
+      <div>
+          <ul id="filters">
+              <select id="category-filter">
+                <option value="">-- Filter by Projects --</option>
+              </select>
+            </li>
+          </ul>
+        </div>
       <article class="template template" data-category="cat">
         <header>
           <h1>Name</h1>

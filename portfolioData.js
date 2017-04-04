@@ -3,17 +3,20 @@
 var portfolioData = [
   {
     name: 'Salmon Cookies',
+    siteName: 'Go to GitHub',
     description: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
-    url: 'https://cvan.io/flexboxin5/',
+    portfolioUrl: 'https://sgordon834.github.io/salmon_cookie_shop/',
   },
   {
     name: 'Bus Mall',
+    siteName: 'Go to GitHub',
     description: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
-    url: 'https://sgordon834.github.io/guessing_game/',
+    portfolioUrl: 'https://sgordon834.github.io/Bus-Mall/',
   },
   {
     name: 'Favor Project',
+    siteName: 'Go to GitHub',
     description: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
-    url: 'https://mattreyes7.github.io/201-final-project/',
+    portfolioUrl: 'https://mattreyes7.github.io/201-final-project/',
   },
 ];
