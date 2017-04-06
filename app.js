@@ -12,13 +12,13 @@ function PortfolioConstructor(proj) {
 PortfolioConstructor.prototype.toHtml = function() {
     var $newPortfolioConstructor = $('article.template').clone();
     $newPortfolioConstructor.removeClass('template');
-
+    $newPortfolioConstructor.attr('data-name', this.name);
     $newPortfolioConstructor.data('category', this.category);
     $newPortfolioConstructor.find('h1').html(this.name);
     $newPortfolioConstructor.find('address a').html(this.siteName);
     $newPortfolioConstructor.find('.article-body').html(this.description);
     $newPortfolioConstructor.find('address a').attr('href', this.portfolioUrl);
-    console.log($newPortfolioConstructor);
+    // console.log($newPortfolioConstructor);
     return $newPortfolioConstructor;
   };
 
