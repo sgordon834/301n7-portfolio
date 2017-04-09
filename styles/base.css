@@ -1,0 +1,37 @@
+body {
+  line-height: 1.5;
+  font-size: 100%;
+  color: #313131;
+}
+
+/*TEXT STYLES
+=======================================*/
+p {
+  font-size: 1em;
+}
+
+address {
+  display: inline-block;
+}
+
+/*LINK STYLES
+=======================================*/
+
+a, a:link, a:active {
+  text-decoration: none;
+  color:  blue
+}
+
+a:hover, a:focus {
+  color: #29506D;
+}
+
+a:visited {
+}
+
+/*IMAGE STYLES
+=======================================*/
+
+img {
+  max-width: 100%;
+}

@@ -1,0 +1,85 @@
+.site-header {
+  background: #C0C0C0;
+}
+
+.heading-group-h1 {
+  float: left;
+  padding: 0 0 .2em 1em;
+}
+
+.icon {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  float: right;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
+.main-nav {
+  padding: 0.1em;
+
+}
+
+.main-nav ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+.main-nav:hover ul {
+  display: block;
+}
+
+.main-nav li {
+  margin-right: .4em;
+  font-size: 1.5em;
+  padding: .5em .2em;
+  border-bottom: 1px solid #ccc;
+}
+
+#filters {
+  padding: 0;
+  list-style: none;
+}
+
+.template {
+  display: none;
+}
+
+.byline {
+  color: #777;
+}
+
+.byline a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 640px) {
+  .icon-menu {
+    display: none;
+  }
+  .main-nav {
+    padding: 0.1em;
+    clear: both;
+  }
+
+  .main-nav ul {
+    display: block;
+    padding: 0;
+    list-style: none;
+    clear: both;
+  }
+
+  .main-nav li {
+    border-bottom: 1px solid green;
+    display: inline;
+    margin-left: 1em;
+  }
+
+}
