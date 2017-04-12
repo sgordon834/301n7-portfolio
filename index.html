@@ -10,6 +10,20 @@
   <link rel="stylesheet" href="styles/layouts.css">
   <link rel="stylesheet" href="styles/module.css">
   <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
+
+  <script id="article-template" type="text/x-handlebars-template">
+    <article class="clearfix" data-author="{{author}}">
+      <header>
+        <h1>{{name}}</h1>
+        <div class="byline">
+          By <address><a href="{{portfolioUrl}}">{{siteName}}</a></address>
+          {{publishedOn}}
+        </div>
+      </header>
+      <section class="article-body">{{{description}}}</section>
+      <a href="#" class="read-on">Read on &rarr;</a>
+    </article>
+  </script>
 </head>
 <body>
   <header class="site-header clearfix">
@@ -41,17 +55,12 @@
           <ul id="filters">
             <li>
               <select id="author-filter">
-                <option value="">-- Filter by Authors --</option>
-              </select>
-            </li>
-            <li>
-              <select id="category-filter">
-                <option value="">-- Filter by Categories --</option>
+                <option value="">-- Filter by Project --</option>
               </select>
             </li>
           </ul>
         </div>
-      <article class="template" data-category="cat">
+       <article class="template" data-category="cat">
         <header>
           <h1>Name</h1>
           <div class="byline">
@@ -66,8 +75,6 @@
         Coding for a Living
       </header>
       <section class="article-body"></section>
-          <a href="#" class="read-on">Read on &rarr;</a>
-        </article>
       </section>
       <section>
         <h2>Likes:</h2>
@@ -84,9 +91,10 @@
   <script src="https://code.jquery.com/jquery-3.2.1.js"
  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
  crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
 <script src="portfolioData.js"></script>
 <script src = "app.js"></script>
-<script src="appList.js" charset="utf-8"></script>>
+<script src="appList.js" charset="utf-8"></script>
 
 </script>
 </body>

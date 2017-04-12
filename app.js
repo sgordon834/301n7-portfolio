@@ -10,16 +10,20 @@ function PortfolioConstructor(proj) {
 }
 
 PortfolioConstructor.prototype.toHtml = function() {
-    var $newPortfolioConstructor = $('article.template').clone();
-    $newPortfolioConstructor.removeClass('template');
-    $newPortfolioConstructor.attr('data-name', this.name);
-    $newPortfolioConstructor.data('category', this.category);
-    $newPortfolioConstructor.find('h1').html(this.name);
-    $newPortfolioConstructor.find('address a').html(this.siteName);
-    $newPortfolioConstructor.find('.article-body').html(this.description);
-    $newPortfolioConstructor.find('address a').attr('href', this.portfolioUrl);
-    // console.log($newPortfolioConstructor);
-    return $newPortfolioConstructor;
+  var template = Handlebars.compile($('#article-template').text());
+  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
+  this.publishStatus = this.publishedOn ? `published ${this.daysAgo} days ago` : '(draft)';
+    // var $newPortfolioConstructor = $('article.template').clone();
+    // $newPortfolioConstructor.removeClass('template');
+    // $newPortfolioConstructor.attr('data-name', this.name);
+    // $newPortfolioConstructor.data('category', this.category); Not in new code
+    // $newPortfolioConstructor.find('h1').html(this.name);
+    // $newPortfolioConstructor.find('address a').html(this.siteName);
+    // $newPortfolioConstructor.find('.article-body').html(this.description);
+    // $newPortfolioConstructor.find('address a').attr('href', this.portfolioUrl);
+    // console.log($newPortfolioConstructor); Not in new code
+    // return $newPortfolioConstructor;
+    return template(this);
   };
 
 
