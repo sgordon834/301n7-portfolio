@@ -72,17 +72,17 @@ appView.handleAuthorFilter = function() {
     $('#category-filter').val('');
   });
 };
-
-appView.handleMainNav = function() {
-  $('.main-nav').on('click', '.tab', function(e) {
-    $('.tab-content').hide();
-    $('#' + $(this).data('content')).fadeIn();
-  });
-
-  $('.main-nav .tab:first').click();
-};
-
-
+//
+// appView.handleMainNav = function() {
+//   $('.main-nav').on('click', '.tab', function(e) {
+//     $('.tab-content').hide();
+//     $('#' + $(this).data('content')).fadeIn();
+//   });
+//
+//   $('.main-nav .tab:first').click();
+// };
+//
+//
 appView.setTeasers = function() {
   $('.article-body *:nth-of-type(n+2)').hide();
 
@@ -99,12 +99,12 @@ appView.setTeasers = function() {
     }
   });
 };
-
+//
 $(document).ready(function() {
   appView.populateFilters();
-  // appView.handleCategoryFilter();
+  appView.handleCategoryFilter();
   appView.handleAuthorFilter();
-  // appView.handleMainNav();
+  appView.handleMainNav();
   appView.setTeasers();
 })
 

@@ -17,14 +17,13 @@
         <h1>{{name}}</h1>
         <div class="byline">
           By <address><a href="{{portfolioUrl}}">{{siteName}}</a></address>
-          {{publishedOn}}
+          {{publishStatus}}
         </div>
       </header>
       <section class="article-body">{{{description}}}</section>
       <a href="#" class="read-on">Read on &rarr;</a>
     </article>
   </script>
-</head>
 <body>
   <header class="site-header clearfix">
     <section class="heading-group-h1">
@@ -60,15 +59,6 @@
             </li>
           </ul>
         </div>
-       <article class="template" data-category="cat">
-        <header>
-          <h1>Name</h1>
-          <div class="byline">
-             <address><a href="">Portfolio Url</a></address>
-          </div>
-        </header>
-        <section class="article-body">Description</section>
-      </article>
     </section>
     <section id="about" class="tab-content">
       <header>
@@ -88,13 +78,11 @@
     &copy; 2017 Code & Peace </b>
     Powered by<i class="fa fa-html5" aria-hidden="true"></i>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.2.1.js"
- integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
- crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
 <script src="portfolioData.js"></script>
 <script src = "app.js"></script>
-<script src="appList.js" charset="utf-8"></script>
+<script src="appList.js"></script>
 
 </script>
 </body>
