@@ -68,7 +68,7 @@ appView.handleAuthorFilter = function() {
       $('article').fadeIn();
       $('article.template').fadeIn('slow');
     }
-    $('#category-filter').val('');
+    // $('#category-filter').val('');
   });
 };
 

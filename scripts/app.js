@@ -32,8 +32,8 @@ portfolioData.forEach(function(articleObject) {
   portfolioArray.push(new PortfolioConstructor(articleObject));
 });
 
-portfolioArray.forEach(function(a) {
-  $('#articles').append(a.toHtml());
+portfolioArray.forEach(function(about) {
+  $('#about').append(about.toHtml());
 });
 // PortfolioConstructor();
 // console.log('Hi');
