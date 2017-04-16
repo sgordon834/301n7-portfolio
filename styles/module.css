@@ -1,5 +1,5 @@
 .site-header {
-  background: #C0C0C0;
+  background: #336699;
 }
 
 .heading-group-h1 {
@@ -35,6 +35,7 @@
 }
 
 .main-nav ul {
+  float: right;
   display: none;
   padding: 0;
   list-style: none;
@@ -55,6 +56,7 @@
 #filters {
   padding: 0;
   list-style: none;
+  color: black;
 }
 
 .template {
@@ -87,7 +89,7 @@
   }
 
   .main-nav li {
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid black;
     display: inline;
     margin-left: 1em;
   }

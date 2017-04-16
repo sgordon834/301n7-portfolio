@@ -6,9 +6,29 @@ body {
 
 /*TEXT STYLES
 =======================================*/
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    line-height: 46px;
+    font-size: 42px;
+    margin: 0 0 23px 0;
+    }
+h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 2px;
+    margin: 0 0 23px 0;
+    }
 p {
-  font-size: 1em;
-}
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    line-height: 23px;
+    margin: 0 0 23px 0;
+    }
 
 address {
   display: inline-block;
@@ -19,11 +39,11 @@ address {
 
 a, a:link, a:active {
   text-decoration: none;
-  color:  white;
+  color:  beige;
 }
 
 a:hover, a:focus {
-  color: #29506D;
+  color: #999999;
 }
 
 a:visited {

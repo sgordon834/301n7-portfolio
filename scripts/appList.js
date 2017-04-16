@@ -68,7 +68,7 @@ appView.handleAuthorFilter = function() {
       $('article').fadeIn();
       $('article.template').fadeIn('slow');
     }
-    // $('#category-filter').val('');
+    $('#category-filter').val('');
   });
 };
 
@@ -90,7 +90,7 @@ appView.handleMainNav = function() {
     $('.tab-content').hide();
     $('#' + $(this).data('content')).fadeIn();
   });
-
+  $('.tab-content').show();
   $('.main-nav .tab:first').click();
 };
 
