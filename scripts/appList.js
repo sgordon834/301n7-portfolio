@@ -90,7 +90,7 @@ appView.handleMainNav = function() {
     $('.tab-content').hide();
     $('#' + $(this).data('content')).fadeIn();
   });
-
+  $('.tab-content').show();
   $('.main-nav .tab:first').click();
 };
 
