@@ -11,20 +11,19 @@
   <link rel="stylesheet" href="styles/module.css">
   <link href="http://fonts.googleapis.com/css?family=Dancing+Script:700|EB+Garamond" rel="stylesheet" type="text/css" />
   <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
-
   <script id="article-template" type="text/x-handlebars-template">
-    <article class="clearfix" data-author="{{name}}">
-      <header>
-        <h1>{{name}}</h1>
-        <div class="byline">
-          By <address><a href="{{portfolioUrl}}">{{siteName}}</a></address>
-          {{publishStatus}}
-        </div>
-      </header>
-      <section class="article-body">{{{description}}}</section>
-      <a href="#" class="read-on">Read on &rarr;</a>
-    </article>
-  </script>
+        <article class="clearfix" data-author="{{name}}">
+          <header>
+            <h1>{{name}}</h1>
+            <div class="byline">
+              By <address><a href="{{portfolioUrl}}">{{siteName}}</a></address>
+              {{publishStatus}}
+            </div>
+          </header>
+          <section class="article-body">{{{description}}}</section>
+          <a href="#" class="read-on">Read on &rarr;</a>
+        </article>
+      </script>
 <body>
   <header class="site-header clearfix">
     <section class="heading-group-h1">
@@ -44,14 +43,14 @@
       <ul>
         <li class="tab" data-content="articles"><a href="#" <i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
         <li class="tab" data-content="about"><a href="#" <i class="fa fa-folder-open" aria-hidden="true"></i>Projects</a></li>
-        <li><a href="about.html" target="_blank" <i class="fa fa-id-badge" aria-hidden="true"></i> About Me</a></li>
-        <li><a href="http://github.com/brookr" target="_blank" <i class="fa fa-github-alt" aria-hidden="true"></i> GitHub</a></li>
+        <li><a href="https://twitter.com/?lang=en" target="_blank" <i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        <li><a href="http://github.com/sgordon834" target="_blank" <i class="fa fa-github-alt" aria-hidden="true"></i> GitHub</a></li>
       </ul>
     </nav>
   </header>
   <main class="background">
     <div>
-      <section id="about" class="tab-content" >
+      <section id="articles" class="tab-content">
       <div>
           <ul id="filters">
             <li>
@@ -62,10 +61,15 @@
           </ul>
         </div>
     </section>
-    <section id="articles" class="tab-content">
-      
+    <section id="about" class="tab-content">
+
         <h2>Coding for a Living</h2>
+
+      <hr>
+
         <h2>Likes:</h2>
+
+        <h1 class="center">This is my Portfolio, Enjoy!</h1>
         <ul>
 
         </ul>
@@ -78,8 +82,11 @@
 </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-<script src="scripts/portfolioData.js"></script>
+<!-- <script src="scripts/portfolioData.js"></script> -->
 <script src = "scripts/app.js"></script>
 <script src="scripts/appList.js"></script>
+<script >
+  PortfolioConstructor.fetchAll();
+</script>
 </body>
 </html>

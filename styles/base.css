@@ -1,4 +1,5 @@
 body {
+  border-style: dashed;
   line-height: 1.5;
   font-size: 100%;
   color: beige;
@@ -33,6 +34,28 @@ p {
 address {
   display: inline-block;
 }
+
+/*hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    align: center;
+    width: 50%;
+}*/
+
+hr {
+  height:1px;
+  border:none;
+  color:#000;
+  background-color:#ccc;
+  width:60%;
+  text-align:center;
+  margin: 0 auto;
+}
+
 
 /*LINK STYLES
 =======================================*/

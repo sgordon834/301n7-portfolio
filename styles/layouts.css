@@ -26,6 +26,10 @@
   background-color: #999999;
 }
 
+.center{
+  text-align: center;
+}
+
 #filters select {
   width: 90%;
   margin: .2em 5%;
