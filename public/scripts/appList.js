@@ -185,22 +185,22 @@ appView.handleMainNav = function() {
 };
 
 
-// appView.setTeasers = function() {
-//   $('.article-body *:nth-of-type(n+2)').hide();
-//
-//   $('article').on('click', '.read-on', function(){
-//     event.preventDefault();
-//     // $(this).parent().find('*').fadeIn('fast');
-//     $(this).siblings('section.article-body').children().toggle();
-//     // $(this).hide();
-//     if ($(this).html() === 'Read on →') {
-//       $(this).html('Read less &larr;');
-//     }
-//     else {
-//       $(this).html('Read on →');
-//     }
-//   });
-// };
+appView.setTeasers = function() {
+  $('.article-body *:nth-of-type(n+2)').hide();
+
+  $('article').on('click', '.read-on', function(){
+    event.preventDefault();
+    // $(this).parent().find('*').fadeIn('fast');
+    $(this).siblings('section.article-body').children().toggle();
+    // $(this).hide();
+    if ($(this).html() === 'Read on →') {
+      $(this).html('Read less &larr;');
+    }
+    else {
+      $(this).html('Read on →');
+    }
+  });
+};
 
 appView.initIndexPage = function() {
   PortfolioConstructor.all.forEach(function(article) {

@@ -110,19 +110,19 @@ PortfolioConstructor.loadAll = function(rawData) {
   })
 }
 
-PortfolioConstructor.fetchAll = function() {
-  if (localStorage.rawData) {
-    PortfolioConstructor.loadAll(JSON.parse(localStorage.rawData));
-    appView.initIndexPage();
-  } else {
-    $(() => {
-      $.ajax({
-        url: 'scripts/portfolioData.json'
-      }).done(function(data) {
-        localStorage.setItem('rawData', JSON.stringify(data));
-        PortfolioConstructor.loadAll(JSON.parse(localStorage.rawData));
-        appView.initIndexPage();
-      });
-    });
-  }
-}
+// PortfolioConstructor.fetchAll = function() {
+//   if (localStorage.rawData) {
+//     PortfolioConstructor.loadAll(JSON.parse(localStorage.rawData));
+//     appView.initIndexPage();
+//   } else {
+//     $(() => {
+//       $.ajax({
+//         url: 'public/data/portfolioData.json'
+//       }).done(function(data) {
+//         localStorage.setItem('rawData', JSON.stringify(data));
+//         PortfolioConstructor.loadAll(JSON.parse(localStorage.rawData));
+//         appView.initIndexPage();
+//       });
+//     });
+//   }
+// }

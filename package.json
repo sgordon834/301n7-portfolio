@@ -1,0 +1,28 @@
+{
+  "name": "301n7-portfolio",
+  "version": "0.1.0",
+  "description": "Class 301n7 Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgordon834/301n7-portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "codefellows"
+  ],
+  "author": "Sidney Gordon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sgordon834/301n7-portfolio/issues"
+  },
+  "homepage": "https://github.com/sgordon834/301n7-portfolio#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}

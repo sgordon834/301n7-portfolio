@@ -1,0 +1,139 @@
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.heading-group-h1 {
+  max-width: 80%;
+  color: black;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background-color: #999999;
+}
+
+.center{
+  text-align: center;
+}
+
+#filters select {
+  width: 90%;
+  margin: .2em 5%;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* REVIEW: Add styles so the filters lay out better on desktop. */
+@media only screen and (min-width: 640px) {
+  .heading-group-h1 {
+    padding: .1em .1em .1em 2em;
+    float: none;
+  }
+
+  #filters select {
+    width: 15em;
+    margin: .2em .2em;
+  }
+
+  #filters li {
+    width: 20em;
+    display: inline;
+  }
+}
+
+progress {
+  /* Positioning */
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  /* Dimensions */
+  width: 100%;
+  height: .25em;
+
+  /* Reset the apperance */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+  /* Get rid of the default border in Firefox/Opera. */
+  border: none;
+
+  /* For Firefox/IE10+ */
+  background-color: transparent;
+
+  /* For IE10+, color of the progress bar */
+  color: red;
+}
+
+progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+.flat::-webkit-progress-value {
+  background-color: red;
+}
+
+.flat::-moz-progress-bar {
+  background-color: red;
+}
+
+.single::-webkit-progress-value {
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(left, transparent, red);
+}
+
+.single::-moz-progress-bar {
+  background-color: transparent;
+  background-image: -moz-linear-gradient(left, transparent, red);
+}
+
+/*.multiple::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(-45deg,
+                               transparent 33%, rgba(0, 0, 0, .1) 33%,
+                               rgba(0,0, 0, .1) 66%, transparent 66%),
+                      -webkit-linear-gradient(left, green, red);
+}
+
+.multiple::-moz-progress-bar {
+  background-image: -moz-linear-gradient(-45deg,
+                               transparent 33%, rgba(0, 0, 0, .1) 33%,
+                               rgba(0,0, 0, .1) 66%, transparent 66%),
+                      -moz-linear-gradient(left, green, red);
+}*/
+
+.progress-container {
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: .25em;
+  display: block;
+}
+
+.progress-bar {
+  background-color: red;
+  width: 50%;
+  display: block;
+  height: inherit;
+}
