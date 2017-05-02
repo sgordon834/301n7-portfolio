@@ -60,6 +60,12 @@ html {
   }
 }
 
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+
+/**, *::after, *::before {
+  box-sizing: border-box;
+}*/
+
 progress {
   /* Positioning */
   position: fixed;
@@ -85,7 +91,7 @@ progress {
   color: red;
 }
 
-progress::-webkit-progress-bar {
+/*progress::-webkit-progress-bar {
   background-color: transparent;
 }
 
@@ -107,7 +113,7 @@ progress::-webkit-progress-bar {
   background-image: -moz-linear-gradient(left, transparent, red);
 }
 
-/*.multiple::-webkit-progress-value {
+.multiple::-webkit-progress-value {
   background-image: -webkit-linear-gradient(-45deg,
                                transparent 33%, rgba(0, 0, 0, .1) 33%,
                                rgba(0,0, 0, .1) 66%, transparent 66%),
@@ -132,8 +138,8 @@ progress::-webkit-progress-bar {
 }
 
 .progress-bar {
-  background-color: red;
-  width: 50%;
+  background-color: black;
+  width: 70%;
   display: block;
   height: inherit;
 }

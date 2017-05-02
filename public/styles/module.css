@@ -9,8 +9,10 @@
 
 .background{
   background-image: url('../images/bridgePic.jpg');
+  /*overflow: hidden;*/
+  display: block;
   position: absolute;
-  z-index: -2;
+  z-index: 1;
   /*opacity: 0.5;*/
   width: 100%;
   height: 100%;
