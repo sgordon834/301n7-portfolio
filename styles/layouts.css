@@ -22,8 +22,27 @@
   right: 0;
   bottom: 0;
   left: 0;
-  text-align: center;
+  /*text-align: center;*/
   background-color: #999999;
+}
+
+/*.nav-sticky__title {
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 60px;
+    white-space: nowrap;
+    font-size: 1.25rem;
+    color: #0a0404;
+    font-family: "ProximaNovaCond-Bold";
+    padding-left: 20px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}*/
+
+.center{
+  text-align: center;
 }
 
 #filters select {
