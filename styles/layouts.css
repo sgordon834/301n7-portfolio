@@ -1,0 +1,69 @@
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.heading-group-h1 {
+  max-width: 80%;
+  color: black;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /*text-align: center;*/
+  background-color: #999999;
+}
+
+/*.nav-sticky__title {
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 60px;
+    white-space: nowrap;
+    font-size: 1.25rem;
+    color: #0a0404;
+    font-family: "ProximaNovaCond-Bold";
+    padding-left: 20px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}*/
+
+.center{
+  text-align: center;
+}
+
+#filters select {
+  width: 90%;
+  margin: .2em 5%;
+}
+
+/* REVIEW: Add styles so the filters lay out better on desktop. */
+@media only screen and (min-width: 640px) {
+  .heading-group-h1 {
+    padding: .1em .1em .1em 2em;
+    float: none;
+  }
+
+  #filters select {
+    width: 15em;
+    margin: .2em .2em;
+  }
+
+  #filters li {
+    width: 20em;
+    display: inline;
+  }
+}

@@ -1,0 +1,83 @@
+body {
+  /*border-style: dashed;*/
+  line-height: 1.5;
+  font-size: 100%;
+  color: beige;
+  background-image: url('../images/bridgePic.jpg');
+  ;
+
+}
+
+/*TEXT STYLES
+=======================================*/
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    line-height: 46px;
+    font-size: 42px;
+    margin: 0 0 23px 0;
+    }
+h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 2px;
+    margin: 0 0 23px 0;
+    }
+p {
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    line-height: 23px;
+    margin: 0 0 23px 0;
+    }
+
+address {
+  display: inline-block;
+}
+
+/*hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    align: center;
+    width: 50%;
+}*/
+
+hr {
+  height:1px;
+  border:none;
+  color:#000;
+  background-color:#ccc;
+  width:60%;
+  text-align:center;
+  margin: 0 auto;
+}
+
+
+/*LINK STYLES
+=======================================*/
+
+a, a:link, a:active {
+  text-decoration: none;
+  color:  beige;
+}
+
+a:hover, a:focus {
+  color: #999999;
+}
+
+a:visited {
+}
+
+/*IMAGE STYLES
+=======================================*/
+
+img {
+  max-width: 100%;
+}
