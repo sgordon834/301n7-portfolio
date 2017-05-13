@@ -49,15 +49,14 @@
         </symbol>
       </svg>
       <ul>
-        <li class="tab" data-content="about"><a href="#" <i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-        <li class="tab" data-content="articles"><a href="#" <i class="fa fa-folder-open" aria-hidden="true"></i>Projects</a></li>
+        <li class="tab" data-content="about"><a href="./about" <i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        <li class="tab" data-content="articles"><a href="./" <i class="fa fa-folder-open" aria-hidden="true"></i>Projects</a></li>
         <li><a href="https://twitter.com/?lang=en" target="_blank" <i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
         <li><a href="http://github.com/sgordon834" target="_blank" <i class="fa fa-github-alt" aria-hidden="true"></i> GitHub</a></li>
       </ul>
     </nav>
   </header>
   <main class="background">
-    <div>
       <section id="articles" class="tab-content">
         <div>
           <ul id="filters">
@@ -67,10 +66,9 @@
               </select>
             </li>
           </ul>
-        </div>
-        <section id="blog-stats">
-           <dt class="inline">Total words:</dt> <dd class="words"></dd>
-         </section>
+          <section id="blog-stats">
+             <dt>Total words:</dt> <dd class="words"></dd>
+           </section>
         </div>
       </section>
       <section id="about" class="tab-content">
@@ -107,19 +105,20 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.8/handlebars.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.7.1/page.js"></script>
 
     <script src ="/scripts/app.js"></script>
-    <!-- <script src="/controllers/articleControl.js"></script>
+    <script src="/controllers/articleControl.js"></script>
     <script src="/controllers/projectControl.js"></script>
-    <script src="/controllers/routes.js"></script> -->
-    <script src="/scripts/appList.js"></script>
+    <script src="/controllers/routes.js"></script>
+    <!-- <script src="/scripts/appView.js"></script> -->
+    <script src="/scripts/appView.js"></script>
     <script src="/scripts/progress.js"></script>
-    <script >
+    <!-- <script >
     PortfolioConstructor.fetchAll();
-  </script>
+  </script> -->
 </body>
 </html>

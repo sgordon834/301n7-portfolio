@@ -1,16 +1,17 @@
 'use strict';
 
 (module => {
+
   function PortfolioConstructor(rawDataObj) {
     Object.keys(rawDataObj).forEach(key => this[key] = rawDataObj[key]);
   }
 
   PortfolioConstructor.all = [];
 
-  PortfolioConstructor.prototype.toHtml = function() {
+  PortfolioConstructor.prototype.toHtml = function () {
     let template = Handlebars.compile($('#article-template').text());
 
-    this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
+    this.daysAgo = parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000);
     this.publishStatus = this.publishedOn ? `published ${this.daysAgo} days ago` : '(draft)';
     this.body = (this.body); //put marked in front of this
 
@@ -28,18 +29,15 @@
   };
 
   PortfolioConstructor.loadAll = rows => {
-    rows.sort((a,b) => (new Date(b.publishedOn)) - (new Date(a.publishedOn)));
-
-
+    rows.sort((a, b) => (new Date(b.publishedOn)) - (new Date(a.publishedOn)));
     PortfolioConstructor.all = rows.map((ele)=> {return new PortfolioConstructor(ele);})
   };
 
-  PortfolioConstructor.fetchAll = function() {
+  PortfolioConstructor.fetchAll = function () {
     if (localStorage.rawData) {
       PortfolioConstructor.loadAll(JSON.parse(localStorage.rawData));
       appView.initIndexPage();
-      // appView.populateFilters();
-      // appView.handleAuthorFilter();
+
       $('#blog-stats .words').text(PortfolioConstructor.numWordsAll())
     } else {
       $(() => {
@@ -49,8 +47,7 @@
           localStorage.setItem('rawData', JSON.stringify(data));
           PortfolioConstructor.loadAll(JSON.parse(localStorage.rawData));
           appView.initIndexPage();
-          // appView.populateFilters();
-          // appView.handleAuthorFilter();
+
           $('#blog-stats .words').text(PortfolioConstructor.numWordsAll())
         });
       });
