@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Portfolio</title>
   <meta name="viewport" content="initial-scale=1">
-  <link rel="stylesheet" href="/styles/normalize.css">
+  <!-- <link rel="stylesheet" href="/styles/normalize.css"> -->
   <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="/styles/base.css">
   <link rel="stylesheet" href="/styles/layouts.css">
@@ -15,7 +15,7 @@
   <script id="article-template" type="text/x-handlebars-template">
     <article class="clearfix" data-author="{{name}}">
     </head>
-    <body class="background">
+    <body>
       <header>
         <h1>{{name}}</h1>
         <div class="byline">
@@ -27,8 +27,13 @@
       <a href="#" class="read-on">Read on &rarr;</a>
     </article>
   </script>
+  <progress value="0" id="progressBar">
+<div class="progress-container">
+<span class="progress-bar"></span>
+</div>
+</progress>
 
-  <header class="site-header clearfix">
+  <header class="site-header clearfix" >
     <section class="heading-group-h1">
       <h1>
         Sidney's Portfolio
@@ -51,7 +56,7 @@
       </ul>
     </nav>
   </header>
-  <main>
+  <main class="background">
     <div>
       <section id="articles" class="tab-content">
         <div>
@@ -63,191 +68,31 @@
             </li>
           </ul>
         </div>
+        <section id="blog-stats">
+           <dt class="inline">Total words:</dt> <dd class="words"></dd>
+         </section>
+        </div>
       </section>
       <section id="about" class="tab-content">
 
-        <h2>Coding for a Living</h2>
+          <h1 class="center">This is Sidney's Portfolio, Enjoy!</h1>
+          <div class="flex-container">
+            <img class="img1" src="../images/school.jpg" alt="Education">
+            <h2>Coding for a Living</h2>
 
-        <h2>Likes:</h2>
+            <h2>Likes:</h2>
 
-        <h1 class="center">This is Sidney's Portfolio, Enjoy!</h1>
-        <progress value="0" id="progressBar">
-  <div class="progress-container">
-    <span class="progress-bar"></span>
-  </div>
-</progress>
+          <hr>
 
-        <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>It should be filling up by now
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>Around half way there
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<p>You made it, enjoy!</p>
 
-        <hr>
+
+
+
+
+
+
+
+
 
         <ul>
 
@@ -260,14 +105,21 @@
     </div>
   </main>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-  <!-- <script src="https://code.jquery.com/jquery-3.2.1.js"></script> -->
-  <script src="/scripts/progress.js"></script>
-  <script src = "/scripts/app.js"></script>
-  <script src="/scripts/appList.js"></script>
-  <script >
-  PortfolioConstructor.fetchAll();
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script> -->
+
+    <script src ="/scripts/app.js"></script>
+    <!-- <script src="/controllers/articleControl.js"></script>
+    <script src="/controllers/projectControl.js"></script>
+    <script src="/controllers/routes.js"></script> -->
+    <script src="/scripts/appList.js"></script>
+    <script src="/scripts/progress.js"></script>
+    <script >
+    PortfolioConstructor.fetchAll();
   </script>
 </body>
 </html>

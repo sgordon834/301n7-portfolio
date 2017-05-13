@@ -5,7 +5,7 @@
   articleControl.index = () => {
     window.PortfolioConstructor.fetchAll();
     $('.tab-content').hide();
-    $('#artilces').fadeIn('slow');
+    $('#articles').fadeIn('slow');
   };
 
   module.articleControl = articleControl;

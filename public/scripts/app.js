@@ -5,13 +5,6 @@
     Object.keys(rawDataObj).forEach(key => this[key] = rawDataObj[key]);
   }
 
-  // function PortfolioConstructor (rawDataObj) {
-  //   this.name = rawDataObj.name;
-  //   this.portfolioUrl = rawDataObj.portfolioUrl;
-  //   this.siteName = rawDataObj.siteName;
-  //   this.description = rawDataObj.description;
-  //   this.publishedOn = rawDataObj.publishedOn;
-  // }
   PortfolioConstructor.all = [];
 
   PortfolioConstructor.prototype.toHtml = function() {
@@ -23,31 +16,46 @@
 
     return template(this);
   };
-  PortfolioConstructor.loadAll = function(rawData) {
-    rawData.sort(function(a,b) {
-      return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-    });
 
-    rawData.forEach(function(ele) {
-      PortfolioConstructor.all.push(new PortfolioConstructor(ele));
+  PortfolioConstructor.numWordsAll = () => {
+    return PortfolioConstructor.all.map((articles) => {
+      var wordCount =  articles.description.split(' ');
+      return wordCount.length;
     })
-  }
+    .reduce((a, b) => {
+      return a + b;
+    })
+  };
+
+  PortfolioConstructor.loadAll = rows => {
+    rows.sort((a,b) => (new Date(b.publishedOn)) - (new Date(a.publishedOn)));
+
+
+    PortfolioConstructor.all = rows.map((ele)=> {return new PortfolioConstructor(ele);})
+  };
 
   PortfolioConstructor.fetchAll = function() {
     if (localStorage.rawData) {
       PortfolioConstructor.loadAll(JSON.parse(localStorage.rawData));
       appView.initIndexPage();
+      // appView.populateFilters();
+      // appView.handleAuthorFilter();
+      $('#blog-stats .words').text(PortfolioConstructor.numWordsAll())
     } else {
-      $.getJSON('/data/portfolioData.json')
-      .then(function(rawData) {
-        PortfolioConstructor.loadAll(rawData);
-        localStorage.rawData = JSON.stringify(rawData);
-        appiew.initIndexPage();
-      }, function(err) {
-        console.error(err);
+      $(() => {
+        $.ajax({
+          url: '/data/portfolioData.json'
+        }).done(function (data) {
+          localStorage.setItem('rawData', JSON.stringify(data));
+          PortfolioConstructor.loadAll(JSON.parse(localStorage.rawData));
+          appView.initIndexPage();
+          // appView.populateFilters();
+          // appView.handleAuthorFilter();
+          $('#blog-stats .words').text(PortfolioConstructor.numWordsAll())
+        });
       });
     }
-  }
+  };
 
   module.PortfolioConstructor = PortfolioConstructor;
 })(window);

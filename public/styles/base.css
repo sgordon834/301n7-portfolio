@@ -3,8 +3,8 @@ body {
   line-height: 1.5;
   font-size: 100%;
   color: beige;
-  background-image: url('../images/bridgePic.jpg');
-  ;
+  /*background-image: url('../images/bridgePic.jpg');*/
+  /*background-image: url('../images/bridge-uk.jpg');*/
 
 }
 
@@ -78,6 +78,7 @@ a:visited {
 /*IMAGE STYLES
 =======================================*/
 
-img {
-  max-width: 100%;
+.img1 {
+  height: 100px;
+  width: 100px;
 }

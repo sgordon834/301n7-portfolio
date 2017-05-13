@@ -1,6 +1,8 @@
 'use strict';
 
-var appView = {};
+(module => {
+
+const appView = {};
 
 appView.populateFilters = function() {
   console.log('pop filters');
@@ -12,12 +14,6 @@ appView.populateFilters = function() {
       if ($(`#author-filter option[value="${val}"]`).length === 0) {
         $('#author-filter').append(optionTag);
       }
-
-      // val = $(this).attr('data-category');
-      // optionTag = `<option value="${val}">${val}</option>`;
-      // if ($(`#category-filter option[value="${val}"]`).length === 0) {
-      //   $('#category-filter').append(optionTag);
-      // }
     }
   });
 };
@@ -36,18 +32,6 @@ appView.handleAuthorFilter = function() {
   });
 };
 
-// appView.handleCategoryFilter = function() {
-//   $('#category-filter').on('change', function() {
-//     if ($(this).val()) {
-//       $('article').hide();
-//       $(`article[data-category="${$(this).val()}"]`).fadeIn();
-//     } else {
-//       $('article').fadeIn();
-//       $('article.template').hide();
-//     }
-//     $('#author-filter').val('');
-//   });
-// };
 
 appView.handleMainNav = function() {
   $('.main-nav').on('click', '.tab', function(e) {
@@ -79,9 +63,31 @@ appView.initIndexPage = function() {
     $('#articles').append(article.toHtml())
   });
 
+// appView.initIndexPage = () => {
+//     $('#ajax-spinner').fadeOut();
+//     $('#filters').fadeIn();
+//     PortfolioConstructor.all.forEach(article => {
+//       $('#articles').append(article.toHtml('#article-template'));
+//       // if($(`#category-filter option:contains("${article.category}")`).length === 0) {
+//       //   $('#category-filter').append(article.toHtml('#category-filter-template'));
+//       // }
+//       if($(`#author-filter option:contains("${article.author}")`).length === 0) {
+//         $('#author-filter').append(article.toHtml('#author-filter-template'));
+//       }
+//     });
+
+// appView.initPage = function() {
+//
+//   $('#blog-stats .words').text(PortfolioConstructor.numWordsAll());
+// };
+
   appView.populateFilters();
-  // appView.handleCategoryFilter();
   appView.handleAuthorFilter();
   appView.handleMainNav();
   appView.setTeasers();
+
 };
+
+module.appView = appView;
+
+})(window);
