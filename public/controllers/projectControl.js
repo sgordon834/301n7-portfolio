@@ -3,8 +3,10 @@
 (module => {
   let projectControl = {};
   projectControl.index = () => {
+    $('article.clearfix').remove();
+    window.PortfolioConstructor.fetchAll();
     $('.tab-content').hide();
-    $('#about').fadeIn();
+    $('#articles').fadeIn();
   };
 
   module.projectControl = projectControl;

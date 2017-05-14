@@ -1,6 +1,6 @@
 'use strict';
 
-page ('/', articleControl.index);
-page ('/about', projectControl.index);
-
+page ('/', window.articleControl.index);
+page ('/about', window.projectControl.index);
+page('/repos', window.reposControl.index);
 page ();

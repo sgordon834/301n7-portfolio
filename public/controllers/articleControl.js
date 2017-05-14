@@ -3,9 +3,9 @@
 (module => {
   let articleControl = {};
   articleControl.index = () => {
-    window.PortfolioConstructor.fetchAll();
+
     $('.tab-content').hide();
-    $('#articles').fadeIn();
+    $('#about').fadeIn();
   };
 
   module.articleControl = articleControl;
