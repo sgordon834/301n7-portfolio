@@ -1,8 +1,53 @@
+
+/*body {
+    /*border-style: dashed;*/
+    line-height: 1.5;
+    font-size: 100%;
+    color: beige;
+    /*background-color: grey;*/
+    margin: 0 0 100px; /* bottom = footer height */
+    padding: 25px;
+    background-image: url('../images/bridgePic.jpg');
+    /*background-image: url('../images/bridge-uk.jpg');*/
+}*/
+
+
+
+/*html {
+  position: relative;
+    min-height: 100%;
+}
+
+footer {
+
+  text-align: center;
+  background-color: #999999;*/
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow:hidden;
+}*/
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
-  border-style: dashed;
-  line-height: 1.5;
-  font-size: 100%;
-  color: beige;
+    margin: 0 0 100px; /* bottom = footer height */
+    padding: 25px;
+}
+
+footer {
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow:hidden;
 }
 
 /*TEXT STYLES

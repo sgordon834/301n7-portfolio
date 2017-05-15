@@ -4,7 +4,7 @@
   let projectControl = {};
   projectControl.index = () => {
     $('article.clearfix').remove();
-    window.PortfolioConstructor.fetchAll();
+    PortfolioConstructor.fetchAll();
     $('.tab-content').hide();
     $('#articles').fadeIn();
   };

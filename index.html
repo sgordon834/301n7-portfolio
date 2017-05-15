@@ -71,7 +71,7 @@
       </ul>
     </nav>
   </header>
-  <main class="background">
+  <main>
     <section id="about" class="tab-content">
       <h1 class="center">This is Sidney's Portfolio, Enjoy!</h1>
       <div class="flex-container">
@@ -85,6 +85,7 @@
         <ul>
 
         </ul>
+
       </section>
       <section id="articles" class="tab-content">
         <div>
@@ -100,19 +101,19 @@
            </section>
         </div>
       </section>
-      <section class="repos about tab-content" id="myRepos">
-
-      <h1>My Repos:</h1>
-      <section class="aboutmain">
+      <section class="tab-content" id="myRepos">
+        <h1>My Repos:</h1>
         <ul id="reposUl"></ul>
       </section>
 
 
-      <section class="article-body"></section>
-      <footer class="footer">
-        &copy; 2017 | Code & Peace | Powered by <i class="fa fa-html5" aria-hidden="true"></i>
-      </footer>
+    <div class="back-to-top">
+    <a href="#" class="back-to-top" style="display: none;">Back to Top</a>
     </div>
+    </div>
+    <footer>
+      &copy; 2017 | Code & Peace | Powered by <i class="fa fa-html5" aria-hidden="true"></i>
+    </footer>
   </main>
 
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
@@ -122,15 +123,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.7.1/page.js"></script>
     <script src="/scripts/githubToken.js"></script>
-    <script src="/scripts/appView.js"></script>
     <script src ="/scripts/app.js"></script>
-    <script src="/controllers/articleControl.js"></script>
-    <script src="/controllers/reposControl.js"></script>
-    <script src="/controllers/projectControl.js"></script>
-
-    <script src="/controllers/routes.js"></script>
+    <script src="/scripts/appView.js"></script>
     <script src="/scripts/repo.js"></script>
     <script src="/scripts/repoView.js"></script>
+    <script src="/controllers/articleControl.js"></script>
+    <script src="/controllers/projectControl.js"></script>
+    <script src="/controllers/reposControl.js"></script>
+
+    <script src="/controllers/routes.js"></script>
     <script src="/scripts/progress.js"></script>
     <script >
     // PortfolioConstructor.fetchAll();
