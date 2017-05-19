@@ -17,14 +17,14 @@
   color: black;
 }
 
-.footer {
+/*footer {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   /*text-align: center;*/
   background-color: #999999;
-}
+}*/
 
 /*.nav-sticky__title {
     display: inline-block;
