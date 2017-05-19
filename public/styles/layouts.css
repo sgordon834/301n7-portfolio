@@ -35,6 +35,22 @@
   margin: .2em 5%;
 }
 
+.flex-container {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+}
+
+.img1 {
+
+  height: 150px;
+  width: 175px;
+  float: left;
+}
+
 html {
   box-sizing: border-box;
 }

@@ -1,11 +1,11 @@
 'use strict';
 
 (module => {
-  const articleControl = {};
+  let articleControl = {};
   articleControl.index = () => {
-    window.PortfolioConstructor.fetchAll();
+
     $('.tab-content').hide();
-    $('#artilces').fadeIn('slow');
+    $('#about').fadeIn();
   };
 
   module.articleControl = articleControl;

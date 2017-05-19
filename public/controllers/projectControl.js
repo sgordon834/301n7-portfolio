@@ -1,10 +1,12 @@
 'use strict';
 
 (module => {
-  const projectControl = {};
+  let projectControl = {};
   projectControl.index = () => {
+    $('article.clearfix').remove();
+    PortfolioConstructor.fetchAll();
     $('.tab-content').hide();
-    $('#about').fadeIn('slow');
+    $('#articles').fadeIn();
   };
 
   module.projectControl = projectControl;

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Portfolio</title>
   <meta name="viewport" content="initial-scale=1">
-  <link rel="stylesheet" href="/styles/normalize.css">
+  <!-- <link rel="stylesheet" href="/styles/normalize.css"> -->
   <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="/styles/base.css">
   <link rel="stylesheet" href="/styles/layouts.css">
@@ -15,7 +15,7 @@
   <script id="article-template" type="text/x-handlebars-template">
     <article class="clearfix" data-author="{{name}}">
     </head>
-    <body class="background">
+    <body>
       <header>
         <h1>{{name}}</h1>
         <div class="byline">
@@ -27,8 +27,27 @@
       <a href="#" class="read-on">Read on &rarr;</a>
     </article>
   </script>
+  <script id="repo-template" type="text/x-handlebars-template">
+    <li class="removeRepos">
+      <a href="{{html_url}}" target="_blank">
+        <h3>{{name}}</h3>
+      </a>
+      <p>Description: {{description}}</p>
+      <p>Language: {{language}}</p>
+      <p>Created: {{created_at}}</p>
+      <p>Last updated: {{updated_at}}</p>
+      {{#if watchers_count}}
+        <p>{{watchers_count}} watching this repo</p>
+      {{/if}}
+    </li>
+  </script>
+  <progress value="0" id="progressBar">
+<div class="progress-container">
+<span class="progress-bar"></span>
+</div>
+</progress>
 
-  <header class="site-header clearfix">
+  <header class="site-header clearfix" >
     <section class="heading-group-h1">
       <h1>
         Sidney's Portfolio
@@ -44,15 +63,30 @@
         </symbol>
       </svg>
       <ul>
-        <li class="tab" data-content="about"><a href="#" <i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-        <li class="tab" data-content="articles"><a href="#" <i class="fa fa-folder-open" aria-hidden="true"></i>Projects</a></li>
+        <li class="tab" data-content="about"><a href="/" <i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        <li class="tab" data-content="articles"><a href="/about" <i class="fa fa-folder-open" aria-hidden="true"></i>Projects</a></li>
+        <li class="tab" data-content="repos"><a href="/repos" <i class="fa fa-archive" aria-hidden="true"></i>Repos</a></li>
         <li><a href="https://twitter.com/?lang=en" target="_blank" <i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
         <li><a href="http://github.com/sgordon834" target="_blank" <i class="fa fa-github-alt" aria-hidden="true"></i> GitHub</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <div>
+    <section id="about" class="tab-content">
+      <h1 class="center">This is Sidney's Portfolio, Enjoy!</h1>
+      <div class="flex-container">
+        <img class="img1" src="../images/school.jpg" alt="Education">
+        <h2>Coding for a Living</h2>
+
+        <h2>Likes:</h2>
+
+        <hr>
+
+        <ul>
+
+        </ul>
+
+      </section>
       <section id="articles" class="tab-content">
         <div>
           <ul id="filters">
@@ -62,212 +96,45 @@
               </select>
             </li>
           </ul>
+          <section id="blog-stats">
+             <dt>Total words:</dt> <dd class="words"></dd>
+           </section>
         </div>
       </section>
-      <section id="about" class="tab-content">
-
-        <h2>Coding for a Living</h2>
-
-        <h2>Likes:</h2>
-
-        <h1 class="center">This is Sidney's Portfolio, Enjoy!</h1>
-        <progress value="0" id="progressBar">
-  <div class="progress-container">
-    <span class="progress-bar"></span>
-  </div>
-</progress>
-
-        <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>It should be filling up by now
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>Around half way there
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<p>You made it, enjoy!</p>
-
-        <hr>
-
-        <ul>
-
-        </ul>
+      <section class="tab-content" id="myRepos">
+        <h1>My Repos:</h1>
+        <ul id="reposUl"></ul>
       </section>
-      <section class="article-body"></section>
-      <footer class="footer">
-        &copy; 2017 | Code & Peace | Powered by <i class="fa fa-html5" aria-hidden="true"></i>
-      </footer>
+
+
+    <div class="back-to-top">
+    <a href="#" class="back-to-top" style="display: none;">Back to Top</a>
     </div>
+    </div>
+    <footer>
+      &copy; 2017 | Code & Peace | Powered by <i class="fa fa-html5" aria-hidden="true"></i>
+    </footer>
   </main>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-  <!-- <script src="https://code.jquery.com/jquery-3.2.1.js"></script> -->
-  <script src="/scripts/progress.js"></script>
-  <script src = "/scripts/app.js"></script>
-  <script src="/scripts/appList.js"></script>
-  <script >
-  PortfolioConstructor.fetchAll();
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.8/handlebars.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.7.1/page.js"></script>
+    <script src="/scripts/githubToken.js"></script>
+    <script src ="/scripts/app.js"></script>
+    <script src="/scripts/appView.js"></script>
+    <script src="/scripts/repo.js"></script>
+    <script src="/scripts/repoView.js"></script>
+    <script src="/controllers/articleControl.js"></script>
+    <script src="/controllers/projectControl.js"></script>
+    <script src="/controllers/reposControl.js"></script>
+
+    <script src="/controllers/routes.js"></script>
+    <script src="/scripts/progress.js"></script>
+    <script >
+    // PortfolioConstructor.fetchAll();
   </script>
 </body>
 </html>

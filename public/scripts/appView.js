@@ -1,6 +1,6 @@
 'use strict';
 
-var appView = {};
+const appView = {};
 
 appView.populateFilters = function() {
   console.log('pop filters');
@@ -36,19 +36,6 @@ appView.handleAuthorFilter = function() {
   });
 };
 
-// appView.handleCategoryFilter = function() {
-//   $('#category-filter').on('change', function() {
-//     if ($(this).val()) {
-//       $('article').hide();
-//       $(`article[data-category="${$(this).val()}"]`).fadeIn();
-//     } else {
-//       $('article').fadeIn();
-//       $('article.template').hide();
-//     }
-//     $('#author-filter').val('');
-//   });
-// };
-
 appView.handleMainNav = function() {
   $('.main-nav').on('click', '.tab', function(e) {
     $('.tab-content').hide();
@@ -74,14 +61,32 @@ appView.setTeasers = function() {
   });
 };
 
-appView.initIndexPage = function() {
-  PortfolioConstructor.all.forEach(function (article) {
+$(document).ready(() => {
+  var offset = 220;
+  var duration = 500;
+  $(window).scroll(() => {
+    if ($(this).scrollTop() > offset) {
+      $('.back-to-top').fadeIn(duration);
+    } else {
+      $('.back-to-top').fadeOut(duration);
+    }
+  });
+
+  $('.back-to-top').click(event => {
+    event.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, duration);
+    return false;
+  });
+});
+
+appView.initIndexPage = () => {
+  PortfolioConstructor.all.forEach(article => {
     $('#articles').append(article.toHtml())
   });
 
   appView.populateFilters();
-  // appView.handleCategoryFilter();
   appView.handleAuthorFilter();
-  appView.handleMainNav();
+
+  // appView.handleMainNav();
   appView.setTeasers();
 };
