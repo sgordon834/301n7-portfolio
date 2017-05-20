@@ -15,9 +15,9 @@
 //
 
 repos.requestRepos = function(callback) {
-    $.get('https://api.github.com/user?access_token=' + window.gitToken)
+    $.get('https://api.github.com/user')
       .then(user => {
-        $.get(user.repos_url + '?access_token=' + window.gitToken)
+        $.get(user.repos_url)
           .then(repo => {
             repo.forEach(results => {
               repos.all.push(results);
