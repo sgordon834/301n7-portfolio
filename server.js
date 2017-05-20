@@ -20,6 +20,8 @@ function proxyGitHub(req, res) {
   }))(req, res);
 }
 
+app.get('/github/*', proxyGitHub);
+
 
 
 app.get('/*', function (req, res) {
