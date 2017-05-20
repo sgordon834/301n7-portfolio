@@ -15,7 +15,7 @@
 //
 
 repos.requestRepos = function(callback) {
-    $.get('https://api.github.com/user')
+    $.get('/github/user')
       .then(user => {
         $.get(user.repos_url)
           .then(repo => {

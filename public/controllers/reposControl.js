@@ -5,7 +5,7 @@
 
   reposControl.index = () => {
     $('.removeRepos').remove();
-    windows.repos.requestRepos(repoView.index);
+    repos.requestRepos(repoView.index);
     console.log(repos.all);
     $('.tab-content').hide();
     $('#myRepos').fadeIn();
