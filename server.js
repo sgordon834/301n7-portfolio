@@ -13,10 +13,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'))
 
 function proxyGitHub(req, res) {
-  console.log('Routing GitHub request for', request.params[0]);
+  console.log('Routing GitHub request for', req.params[0]);
   (requestProxy({
-    url: `https://api.github.com/${request.params[0]}`,
-    headers: {Authorization: `token ${process.env.GITHUB_TOKEN}`}
+    url: `https://api.github.com/${req.params[0]}`,
+    headers: { Authorization: `token ${process.env.GITHUB_TOKEN}`}
   }))(req, res);
 }
 
