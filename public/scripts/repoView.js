@@ -3,7 +3,7 @@
 (module => {
   const repoView = {};
   const render = Handlebars.compile($('#repo-template').text());
-  repoView.index = repos => {
+  repoView.index = function () {
     $('#reposUl').append(repos.with('name').map(render));
   };
 
